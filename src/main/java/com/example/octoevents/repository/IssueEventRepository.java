@@ -3,7 +3,7 @@
  */
 package com.example.octoevents.repository;
 
-import com.example.octoevents.model.entity.IssueEvent;
+import com.example.octoevents.model.IssueEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
