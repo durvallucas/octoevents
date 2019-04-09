@@ -17,7 +17,4 @@ Para que a migração executada pela ferramento Flyway ocorra corretamente ao in
 
 Deve ser criado um banco de dados de nome "octoevents", onde o owner é o usuário criado "octo". Nesse banco de dados deve ser configurado um schema de nome "octo".
 
-## Configurando o Webhook do Repositório.
-Para realizar os testes do Webhook Endpoint, é necessário atualizar a Payload url do webhook configurado no repositório. Essa url deve ser atualizada com a url gerada pela ferramenta ngrok, para o localhost na porta 8080 concatenada ao sufixo "/issues", exemplo: http://b48fd5a1.ngrok.io/issues.
-
 ## OBS: A aplicação está configurada para rodar na porta 8080.
