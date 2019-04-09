@@ -1,56 +1,30 @@
 /*
  * Entidade com os dados pertinentes a um Issue Event
  */
-package com.example.octoevents.model;
+package com.example.octoevents.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Map;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
 
 /**
  *
  * @author lucas
  */
-@Entity
-@Table(name = "issue_event", schema = "octo")
-public class IssueEvent {
+
+public class IssueEventDto {
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_issue_event")
-    @SequenceGenerator(name = "sq_issue_event", sequenceName = "octo.sq_issue_event", allocationSize = 1)
-    @Column(name = "id", nullable = false)
-    private Long id;
-    
-    @Column(name = "numero")
     private Integer numero;
     
     @JsonProperty("action")
-    @Column(name = "acao")
     private String acao;
     
-    @Column(name = "dt_criacao")
     private LocalDateTime dataCriacao;
     
-    @Column(name = "dt_atualizacao")
     private LocalDateTime dataAtualizacao;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    
 
     public Integer getNumero() {
         return numero;
